@@ -7,9 +7,13 @@
 //
 
 #include <stdio.h>
+#include "list.h"
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	printf("Hello, World!\n");
+	liste_t l;
+	l.tete = NULL;
+	l.fin = NULL;
+	lire_from_file(&l, argv[1]);
+	write_to_file(l, "/Users/armenaristakessyan/Documents/prog./c/tp_c_isima/Documentation/Documentation/doc.txt");
 	return 0;
 }
